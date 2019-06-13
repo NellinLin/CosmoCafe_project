@@ -1,0 +1,40 @@
+{% extends 'Nastya_base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="header_main_ab">
+    <h1 class="header_title_ab shadow">фотогалерея</h1>
+     <dev class="phone_block">
+        <img class="phone_size" src="{% static 'image/phone.png' %}">8(495) 178-54-26
+    </dev>
+</div>
+
+<div class="shadow_ins">
+    <main class="gallery">
+        {% for photo in galery %}
+            <div class="img_pad_gal">
+                <img src="{{photo.image.url}}"  class="img_w">
+            </div>
+        {% endfor %}
+    </main>
+    <div class="pic_padding"></div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+<div class="footer_w block bg_w_c">
+    <div class="content_c bg_w_c">
+        <a href="{% url 'index' %}"><img class="logo_size logo_padding_l" src="{% static 'image/logo.png' %}"></a>
+        <div class="header_main_item_w logo_padding">
+            <a class="w_color" href="{% url 'aboutus' %}">О НАС</a> |
+            <a class="w_color" href="{% url 'photogalery' %}">ГАЛЕРЕЯ</a> |
+            <a class="w_color" href="{% url 'menufull' %}">МЕНЮ</a> |
+            <a class="w_color" href="{% url 'contacts' %}">КОНТАКТЫ</a> |
+            <a class="w_color" href="{% url 'writeus' %}">ОСТАВИТЬ СООБЩЕНИЕ</a>
+        </div>
+        <a href="{% url 'index' %}"><img class="logo_size margin_padding" src="{% static 'image/logo.png' %}"></a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,351 @@
+.header{
+  width: 100%;
+  height: 85px;
+  z-index: 99;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+  position: fixed;
+}
+
+.header .container {
+    padding: 0 0;
+    position: relative;
+}
+
+.button_container {
+    position: absolute;
+    top: -5px;
+    left: 0%;
+    cursor: pointer;
+    width: 89px;
+    height: 89px;
+    background-color: #8B008B;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+    outline: 2px solid  #fff; 
+}
+
+.button_container span:nth-of-type(2) {
+    top: 42px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 52px;
+}
+
+.button_container span {
+    background: #ffffff;
+    border: none;
+    height: 5px;
+    width: 46px;
+    position: absolute;
+    top: 32px;
+    left: 22px;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-top: 92px;
+    margin-left: -130px;
+    width: 350px;
+    background-color: #FFFFFF;
+    border: 1px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.dropdown ul{
+    display: none;
+}
+
+dropdown a:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #8B008B ;
+    transition: width .3s ease-in-out;
+}
+
+dropdown a:hover{
+    text-decoration: none;
+}
+
+.dropdown a:hover:after,
+.dropdown  a:focus:after {
+    width: 100%;
+}
+
+.button_container:hover ul{
+    display: block;
+}
+
+.button_container:hover {
+    opacity: .99;
+}
+
+.button_container:hover .top {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.button_container:hover .bottom {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.header	 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-top: 28px;
+    padding: 28px 80px;
+}
+
+.header ul li {
+    display: inline-block;/* Отображать как строчный элемент */
+    margin-right: 0px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+    font-size: 20px;
+   }
+
+.header .cosmocafe_logo {
+    position: absolute;
+    width: 89px;
+    height: 89px;	
+    right: 0%;
+    top: 6px;
+}
+
+.header li a{
+	color: #8B008B;
+	text-transform: uppercase;
+	padding: 0 40px;
+}
+
+.header a:hover{
+	color: #FF00FF;
+	text-decoration:none;
+}
+
+.cosmocafe_logo img {
+    max-width: 100%;
+}
+
+.button_container.passive {
+    margin-left: 190px;
+}
+
+.button_container.passive .top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+
+.button_container.passive .middle {
+    opacity: 0;
+    background: #FFF;
+}
+
+.button_container.passive .bottom {
+    -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
+    transform: translateY(-9px) translateX(0) rotate(-45deg);
+    background: #FFF;
+}
+
+.flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.cosmomenu_cakes {
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+    top:120px;
+}
+
+.cosmomenu_makar {
+    background: #DDA0DD;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+    top:130px;
+}
+
+.cosmomenu_pir {
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+    top:140px;
+}
+
+.cosmomenu_koktels {
+    background: #E6E6FA;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+    top:150px;
+}
+
+.cosmo_item {
+    text-decoration: unset;
+    color: unset;
+}
+
+.cosmo_item {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+.cosmo_item {
+    float: left;
+    width: 25%;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.flexbox img {
+	max-width: 70%;	
+    cursor: pointer;
+}
+
+
+.all_item {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 5em calc(.8em + 3px);
+    border-radius: 20px;
+    background: #8B008B;
+    box-shadow: 0 -3px #4B0082 inset;
+    transition: 0.2s;
+    position: relative;
+    margin-left: 485px;
+}
+
+.all_item:hover{
+    font-weight: 700;
+    color: white;
+    background: #9932CC;
+}
+
+.menu-flexbox__item__title {
+    margin-bottom: 60px;
+}
+
+.menu-flexbox__item__title {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.flexbox_cakes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.flexbox_cakes .snacks__list {
+    overflow: visible;
+}
+
+.snacks__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.snacks__list {
+    max-width: 1100px;
+}
+
+.snacks__list {
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width: 1270px;
+}
+
+.sect-item:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 11px 15px 0 rgba(0, 0, 0, 0.14);
+}
+
+.new_menu_header {
+    background-color: #fff;
+    position: relative;
+    color: #8B008B;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding-top: 130px;
+    text-transform: uppercase;
+}
+
+.snacks__list .sect-item {
+    width: 30% ;
+    margin-right: 36px;
+    margin-left: 0;
+}
+
+.sect-item {
+    margin-right: 10px;
+    margin-left: 10px;
+    max-width: 31%;
+    margin-bottom: 32px;
+    height: auto;
+    min-height: 160px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-family: 'Circe';
+    font-size: 20px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    color: #000;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.snacks__list .png-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menu__item_name{
+    font-size: 30px;
+    color: #8B008B;
+}
+
+.menu__item_price {
+    margin-top: 15px
+}
+
+.text-wrap {
+    width: 100%;
+    height: auto;
+    padding: 25px 30px;
+    background: #E6E6FA
+}

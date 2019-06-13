@@ -1,0 +1,117 @@
+{% extends 'Nastya_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="header_main">
+    <div class="header_main_box">
+        <div class="header_main_logo">
+            <img src="{% static 'image/logo.png' %}">
+        </div>
+        <div class="header_main_title shadow">
+            космические
+        </div>
+        <a class="header_main_item shadow">
+            кексы | макаруны | милкшейки
+        </div>
+    </div>
+    <dev class="phone_block">
+        <img class="phone_size" src="{% static 'image/phone.png' %}">8(495) 178-54-26
+    </dev>
+</div>
+
+<div class="row padding_2_p margin_for_row" style="height:250px;">
+    <!--Горизонтальное поле-->
+    <div class="left_col_reg col-md-4 margin_top" >
+        <div class="text">
+            <h2 style="font-weight: bold;">О НАС</h2>
+            <div> Интересное кафе для любителей космической атмосферы и дессертов, желающих провести свой вечер в таинственном уюте, также удивить вторую половинку
+            </div>
+            <div class="but_padding">
+            <button class="knopka" type="submit"><a style="text-decoration: none; color: white;" href="{% url 'aboutus' %}">Далее</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="left_col_reg col-md-4 koktel" >
+    </div>
+     <div class="left_col_reg col-md-4 margin_top" >
+        <div class="text">
+            <h2 style="font-weight: bold;">КАК НАС НАЙТИ</h2>
+            <div> Мясницкая, 11
+            <p>8(495)-178-54-26</p>
+            </div>
+            <div style="padding-top:16%">
+            <a  href="{% url 'contacts' %}">
+            <div class="but_padding">
+                <button class="knopka" type="submit"><span style="text-decoration: none; color: white;">Контакты</span></button>
+            </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row padding_2_p margin_for_row" style="height: 420px;">
+    <!--Горизонтальное поле-->
+    <div class="left_col_reg col-md-4 macr padding_r" >
+        <div class="bg_white">
+            <div class="text w_color">
+                <h2 style="font-weight: bold;">ФОТОЧКИ</h2>
+                <div>Оставляйте ваши космо-фото :)</div>
+
+                <a href="{% url 'photogalery' %}">
+                <div class="but_padding">
+                    <button class="knopka_w" type="submit"><span style="text-decoration: none; color: #a24a97;"><b>Галерея</b></span></button>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="left_col_reg col-md-4 bg_fiol" >
+        <div class="text w_color al_cent">
+            <h2 class="menu_pad" style="font-weight: bold;"><a class="w_color" href="{% url 'menufull' %}">МЕНЮ</a></h2>
+            <h3>_________</h3>
+            <h3 class="menu_pad"><a class="w_color" href="{% url 'cakes' %}">кексы</a></h3>
+            <h3 class="menu_pad"><a class="w_color" href="{% url 'macaroons' %}">макаруны</a></h3>
+            <h3 class="menu_pad"><a class="w_color" href="{% url 'cupcakes' %}">пирожные</a></h3>
+            <h3 class="menu_pad"><a class="w_color" href="{% url 'drinks' %}">напитки</a></h3>
+        </div>
+    </div>
+    <div class="left_col_reg col-md-4 bg_keks padding_r" >
+        <div class="bg_white">
+            <div class="text w_color">
+                <h2 style="font-weight: bold;">ПОНРАВИЛОСЬ?</h2>
+                <div style="padding-bottom:10px;">Оставляйте отзыв или фото :)
+                </div>
+                <a  href="{% url 'writeus' %}"
+                <div class="but_padding" style="padding-top: 10px;">
+                    <button class="knopka_w" type="submit"><span style="text-decoration: none; color: #a24a97;"><b>Отзыв и Фото</b></span></button>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+<div class="footer_w block">
+    <div class="content_c">
+        <a href="{% url 'index' %}"><img class="logo_size logo_padding_l" src="{% static 'image/logo_b.png' %}"></a>
+        <div class="header_main_item_b logo_padding">
+            <a class="b_color" href="{% url 'aboutus' %}">О НАС</a> |
+            <a class="b_color" href="{% url 'photogalery' %}">ГАЛЕРЕЯ</a> |
+            <a class="b_color" href="{% url 'menufull' %}">МЕНЮ</a> |
+            <a class="b_color" href="{% url 'contacts' %}">КОНТАКТЫ</a> |
+            <a class="b_color" href="{% url 'writeus' %}">ОСТАВИТЬ СООБЩЕНИЕ</a>
+        </div>
+        <a href="{% url 'index' %}"><img class="logo_size margin_padding" src="{% static 'image/logo_b.png' %}"></a>
+    </div>
+</div>
+{% endblock %}
+

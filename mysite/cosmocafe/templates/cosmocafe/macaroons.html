@@ -1,0 +1,138 @@
+{% extends 'Dima_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="menu_header new_menu_header" style="padding-top: 90px;">
+    <h1 class="menu_header_title" style="margin-bottom: 0px; font-size: 40px;">макаруны</h1>
+</div>
+
+<div class="flexbox_cakes">
+    <div class="snacks__list">
+
+    	{% for macaroon in macaroons %}
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{{macaroon.image.url}}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        {{macaroon.title}}                     </div>
+                <div class="menu__item_desc">
+                        {{macaroon.text}}                    </div>
+                <div class="menu__item_price">
+                        Цена: <span> {{macaroon.price}} ₽</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+<!--
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{% static 'image/makr.png' %}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        Макарумба                    </div>
+                <div class="menu__item_desc">
+                        с шоколадной глазурью                    </div>
+                <div class="menu__item_price">
+                        Цена: <span>80 ₽</span>
+                </div>
+            </div>
+        </div>
+-->
+
+{% endblock %}

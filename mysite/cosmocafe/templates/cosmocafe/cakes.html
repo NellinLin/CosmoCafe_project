@@ -1,0 +1,32 @@
+{% extends 'Dima_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="menu_header new_menu_header" style="padding-top: 90px;">
+    <h1 class="menu_header_title" style="margin-bottom: 0px; font-size: 40px;">кексы</h1>
+</div>
+
+<div class="flexbox_cakes">
+    <div class="snacks__list">
+
+    	{% for cake in cakes %}
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{{cake.image.url}}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        {{cake.title}}                   </div>
+                <div class="menu__item_desc">
+                        {{cake.text}}                    </div>
+                <div class="menu__item_price">
+                        Цена: <span> {{cake.price}} ₽</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+{% endblock %}
+

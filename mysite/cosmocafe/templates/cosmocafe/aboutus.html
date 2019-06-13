@@ -1,0 +1,66 @@
+{% extends 'Nastya_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="header_main_ab">
+    <h1 class="header_title_ab shadow">о нас</h1>
+     <dev class="phone_block">
+        <img class="phone_size" src="{% static 'image/phone.png' %}">8(495) 178-54-26
+    </dev>
+</div>
+
+<div class="row padding_2_p margin_for_row">
+    <!--Горизонтальное поле-->
+    <div class="left_col_reg col-md-8" >
+        <div class="text_ab">
+            <h1>О НАС</h1>
+            <div class="text_pad">
+                Первое кафе с космической тематикой в Москве!
+            </div>
+            <div class="text_pad">
+                Мы рады нашим межгалактическим посетителям в любое время. Подарить вам хорошее настроение и видеть ваши улыбки - это наша первостепенная задача.
+            </div>
+            <div class="text_pad">
+                Наши десерты делаются с особой любовью! Для каждого индивидуальный подход. Для милых дам, следящих за своеё фигуркой и каллорийностью продуктов, наше кафе приглянётся, потому что у нас не используется чистый сахар при изготовлении вкусняшек.
+            </div>
+            <div class="text_pad">
+                Правильное питание и только!
+            </div>
+            <div class="but_pad_ab">
+            <button class="knopka" type="submit"><a style="text-decoration: none; color: white;" href="{% url 'contacts' %}">Контакты</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="left_col_reg col-md-4" >
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/1.jpg);"></div>
+        </div>
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/cookie.jpg);"></div>
+        </div>
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/3.jpg);"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block nav %}
+<div class="pic_padding">
+<div class="footer_w block bg_w_c">
+    <div class="content_c bg_w_c">
+        <a href="{% url 'index' %}"><img class="logo_size logo_padding_l" src="{% static 'image/logo.png' %}"></a>
+        <div class="header_main_item_w logo_padding">
+            <a class="w_color" href="{% url 'aboutus' %}">О НАС</a> |
+            <a class="w_color" href="{% url 'photogalery' %}">ГАЛЕРЕЯ</a> |
+            <a class="w_color" href="{% url 'menufull' %}">МЕНЮ</a> |
+            <a class="w_color" href="{% url 'contacts' %}">КОНТАКТЫ</a> |
+            <a class="w_color" href="{% url 'writeus' %}">ОСТАВИТЬ СООБЩЕНИЕ</a>
+        </div>
+        <a href="{% url 'index' %}"><img class="logo_size margin_padding" src="{% static 'image/logo.png' %}"></a>
+    </div>
+</div>
+</div>
+{% endblock %}

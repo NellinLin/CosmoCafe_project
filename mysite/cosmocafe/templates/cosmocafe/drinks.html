@@ -1,0 +1,33 @@
+{% extends 'Dima_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="menu_header new_menu_header" style="padding-top: 90px;">
+    <h1 class="menu_header_title" style="margin-bottom: 0px; font-size: 40px;">Напитики</h1>
+</div>
+
+<div class="flexbox_cakes">
+    <div class="snacks__list">
+
+    	{% for drink in drinks %}
+        <div class="snacks__list__item sect-item ">
+            <div class="png-wrap">
+                <img src="{{drink.image.url}}">
+            </div>
+            <div class="text-wrap">
+                <div class="menu__item_name">
+                        {{drink.title}}                    </div>
+                <div class="menu__item_desc">
+                        {{drink.text}}                    </div>
+                <div class="menu__item_price">
+                        Цена: <span> {{drink.price}} ₽</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

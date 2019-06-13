@@ -1,0 +1,94 @@
+{% extends 'Nastya_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="header_main_ab">
+    <h1 class="header_title_ab shadow">напиши нам</h1>
+     <dev class="phone_block">
+        <img class="phone_size" src="{% static 'image/phone.png' %}">8(495) 178-54-26
+    </dev>
+</div>
+
+<div class="row padding_2_p margin_for_row">
+    <!--Горизонтальное поле-->
+    <div class="left_col_reg col-md-3" >
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/3.jpg);"></div>
+        </div>
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/2.jpg);"></div>
+        </div>
+    </div>
+
+    <div class="left_col_reg col-md-6 pic_padding" >
+        <!--
+        <form href="{% url 'writeus' %}" method="post">
+            {% csrf_token %}
+            <h1 class="padding_soop">ОТПРАВИТЬ СООБЩЕНИЕ</h1>
+            <div class="form_pad">
+            <input type="text" name="username" class="form-control" placeholder="Ваше Имя" value="" required="">
+            </div>
+            <div class="form_pad">
+            <input type="text" name="email" class="form-control" placeholder="Ваш email" value="" required="">
+            </div>
+            <div class="form_pad">
+            <input type="text" name="message" class="form-control height_s" placeholder="Ваше сообщение" value="">
+            </div>
+            <div class="form_pad">
+            <input type="image" name="photo" class="form-control" placeholder="Ваше фото" value="">
+            </div>
+            <div class="but_pad_ab">
+            <button class="knopka" type="submit" style="text-decoration: none; color: white;">Отправить</button>
+            </div>
+        </form>
+        -->
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1 class="padding_soop">ОТПРАВИТЬ СООБЩЕНИЕ</h1>
+            <div class="form_pad">
+            <input type="text" name="name" class="form-control" placeholder="Ваше имя" value="" required="">
+            </div>
+            <div class="form_pad">
+            <input type="text" name="email" class="form-control" placeholder="Ваш email" value="" required="">
+            </div>
+            <div class="form_pad">
+            <input type="text" name="content" class="form-control height_s" placeholder="Ваше сообщение" value="">
+            </div>
+            <div class="form_pad">
+            {{form.image}}
+            </div>
+            <div class="but_pad_ab">
+            <button class="knopka" type="submit" style="text-decoration: none; color: white;">Отправить</button>
+            </div>
+        </form>
+    </div>
+     <div class="left_col_reg col-md-3" >
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/1.jpg);"></div>
+        </div>
+        <div class="pic_padding">
+        <div class="pic_main_ab" style="background-image: url(/static/image/cookie.jpg);"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block nav %}
+<div class="pic_padding">
+<div class="footer_w block bg_w_c">
+    <div class="content_c bg_w_c">
+        <a href="{% url 'index' %}"><img class="logo_size logo_padding_l" src="{% static 'image/logo.png' %}"></a>
+        <div class="header_main_item_w logo_padding">
+            <a class="w_color" href="{% url 'aboutus' %}">О НАС</a> |
+            <a class="w_color" href="{% url 'photogalery' %}">ГАЛЕРЕЯ</a> |
+            <a class="w_color" href="{% url 'menufull' %}">МЕНЮ</a> |
+            <a class="w_color" href="{% url 'contacts' %}">КОНТАКТЫ</a> |
+            <a class="w_color" href="{% url 'writeus' %}">ОСТАВИТЬ СООБЩЕНИЕ</a>
+        </div>
+        <a href="{% url 'index' %}"><img class="logo_size margin_padding" src="{% static 'image/logo.png' %}"></a>
+    </div>
+</div>
+</div>
+{% endblock %}

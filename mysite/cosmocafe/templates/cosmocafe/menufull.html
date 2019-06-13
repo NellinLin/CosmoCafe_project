@@ -1,0 +1,118 @@
+{% extends 'Dima_base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="flexbox">
+<div class="cosmomenu_cakes">
+
+	<div class="menu-flexbox__item__title">
+        кексы
+    </div>
+    {% for cake in cakes %}
+    <div class="cosmo_item">
+        <img src="{{cake.image.url}}">
+                    
+        <div class="menu__list__item__title ">
+            		{{cake.title}}                  </div>
+        <div class="menu__list__item__price">
+                       	{{cake.price}} руб.                     </div>
+    </div>
+    {% endfor %}
+
+    <div style="height:400px;">
+    	<a href="{% url 'cakes' %}" class = "all_item">посмотреть другие</a>
+    </div>
+</div>
+</div>
+
+<div class = "flexbox">
+<div class="cosmomenu_makar">
+
+	<div class="menu-flexbox__item__title">
+        макаруны
+    </div> 
+
+    {% for macaroon in macaroons %}
+    <div class="cosmo_item">
+        <img src="{{macaroon.image.url}}">
+                    
+        <div class="menu__list__item__title ">
+            		{{macaroon.title}}                  </div>
+        <div class="menu__list__item__price">
+                       	{{macaroon.price}} руб.                     </div>
+    </div>
+    {% endfor %}
+
+    <div style="height:430px;">
+    	<a href="{% url 'macaroons' %}" class = "all_item">посмотреть другие</a>
+    </div>
+</div>
+</div>
+
+<div class = "flexbox">
+<div class="cosmomenu_pir"> 
+
+	<div class="menu-flexbox__item__title">
+        пироженые
+    </div>
+
+    {% for cupcake in cupcakes %}
+    <div class="cosmo_item">
+        <img src="{{cupcake.image.url}}">
+                    
+        <div class="menu__list__item__title ">
+                    {{cupcake.title}}                  </div>
+        <div class="menu__list__item__price">
+                        {{cupcake.price}} руб.                     </div>
+    </div>
+    {% endfor %}
+
+	<div style="height:400px;">
+    	<a href="{% url 'cupcakes' %}" class = "all_item">посмотреть другие</a>
+    </div>
+</div>
+</div>
+
+<div class = "flexbox" style="padding-bottom:10%">
+<div class="cosmomenu_koktels">
+
+<div class="menu-flexbox__item__title">
+        напитки
+    </div>
+
+    {% for drink in drinks %}
+    <div class="cosmo_item">
+        <img src="{{drink.image.url}}">
+                    
+        <div class="menu__list__item__title ">
+                    {{drink.title}}                  </div>
+        <div class="menu__list__item__price">
+                        {{drink.price}} руб.                     </div>
+    </div>
+    {% endfor %}
+
+	<div style="height:430px; margin-bottom:2%;">
+    	<a href="{% url 'drinks' %}" class = "all_item">посмотреть другие</a>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+<div class="footer_w block bg_w_c">
+    <div class="content_c bg_w_c">
+        <a href="{% url 'index' %}"><img class="logo_size logo_padding_l" src="{% static 'image/logo.png' %}"></a>
+        <div class="header_main_item_w logo_padding">
+            <a class="w_color" href="{% url 'aboutus' %}">О НАС</a> |
+            <a class="w_color" href="{% url 'photogalery' %}">ГАЛЕРЕЯ</a> |
+            <a class="w_color" href="{% url 'menufull' %}">МЕНЮ</a> |
+            <a class="w_color" href="{% url 'contacts' %}">КОНТАКТЫ</a> |
+            <a class="w_color" href="{% url 'writeus' %}">ОСТАВИТЬ СООБЩЕНИЕ</a>
+        </div>
+        <a href="{% url 'index' %}"><img class="logo_size margin_padding" src="{% static 'image/logo.png' %}"></a>
+    </div>
+</div>
+{% endblock %}
+
